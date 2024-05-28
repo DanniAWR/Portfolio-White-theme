@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import projectImage from '../images/ascent.png'; // Assurez-vous d'ajouter l'image de votre projet ici
+import projectImage from '../images/ascent.png'; 
 import logo1 from '../images/logo1.png';
 import logo2 from '../images/logo2.png';
 import logo3 from '../images/node.png';
@@ -11,16 +11,15 @@ const projects = [
     description: "I created a website to sell my full-stack development services where you will find all the information about my services.",
     technologies: ["React", "Next.js", "Tailwind CSS", "JavaScript/JSON"],
     image: projectImage,
-    link: "/projects/ascent-technologies" // Ajoutez un lien vers la page du projet
+    link: "/projects/ascent-technologies"
   },
   {
     title: "Portfolio",
     description: "I created a website to sell my full-stack development services where you will find all the information about my services.",
     technologies: ["React", "Next.js", "Tailwind CSS", "JavaScript/JSON"],
     image: projectImage,
-    link: "/projects/ascent-technologies" // Ajoutez un lien vers la page du projet
+    link: "/projects/ascent-technologies" 
   },
-  // Ajoutez plus de projets ici si nécessaire
 ];
 
 const Home = () => {
@@ -30,21 +29,21 @@ const Home = () => {
     projects.forEach((project, index) => {
       setTimeout(() => {
         setVisibleProjects((prev) => {
-          // Check if the project is already in the visibleProjects array
           if (!prev.some(p => p.title === project.title)) {
             return [...prev, project];
           }
           return prev;
         });
-      }, index * 200); // 500ms delay between each project
+      }, index * 200);
     });
   }, []);
 
   return (
     <div className="flex items-start justify-center min-h-screen pt-20 ml-38">
       <div className="text-left max-w-2xl">
-        <h1 className="text-3xl font-bold mb-4 text-gray-600">
-          <span role="img" aria-label="wave" className="mr-2">👋</span>
+        
+          <span role="img" aria-label="wave" className=" text-4xl mr-2">👋</span>
+          <h1 className="text-3xl font-bold mb-4 text-gray-600">
           Hello there! I'm Anwar
         </h1>
         <p className="text-s mb-2 text-gray-600">
